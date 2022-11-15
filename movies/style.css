@@ -1,0 +1,304 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Cambria, sans-serif;
+    margin: 0;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+.linea{
+    background-color: black;
+    height: 5px;
+    width: 100%;
+    display: block;   
+}
+.container{
+ max-width: 1400px;
+ margin: auto;
+ height: 100%;
+ 
+
+}
+header{
+    background-color: rgb(11, 8, 8);
+    
+}
+.buscar input{
+    width: 200px;
+    padding: 9px 10px;
+    border: 3px solid hotpink;
+    margin: 17px;
+
+    
+    
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: blueviolet;
+    font-size: 2.5em;
+    align-items: center;
+}
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 60px;
+    margin: 12px;
+}
+header a{
+    text-decoration: none;
+    padding: 5px 12px;
+    font-weight: bold;
+    color: palevioletred;
+    
+}
+header a:hover{
+    color: blueviolet;
+}
+
+
+@media (min-width: 720px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+    header .container{
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+header nav{
+    flex-direction: row;
+    padding-bottom: 0;
+    padding-right: 20px;
+
+}
+ nav{
+     height: 100%;
+    
+ }
+  
+ nav > ul{
+     height: 100%;
+     display: flex;
+     
+ }
+ nav  ul  li {
+     height: 100%;
+     list-style: none;
+     position: relative;
+ }
+nav > ul > li > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 14px;
+    align-items: center ;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 300ms ease;
+}
+nav ul li ul {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: blueviolet;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    position: absolute;
+    list-style: none;
+    top: 90px;   
+    left: -5px;
+    padding: 14px 0px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+    transition: all 300ms ease;
+}
+nav ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+}
+nav ul li ul:before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid blueviolet;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+nav ul li ul li a{
+    display: block;
+    padding: 6px;
+    color: black;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+}
+nav ul li ul li a:hover{
+    background-color: rgb(207, 13, 110);
+    color: white;
+    transform: scale(1.1);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    
+}
+.slider{
+    width: 95%;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+   justify-content: center;
+   
+}
+.slider ul{
+    display: flex;
+    padding: 0;
+    width: 300%;
+    animation: slide 20s infinite alternate ease-in-out;
+    
+    
+   
+}
+.slider li{
+    list-style: none;
+    width: 100%;
+}
+ .slider img{
+    width: 50%;
+    display: flex;
+}
+
+@keyframes slide{
+    0% {margin-left: 0%;}
+    20% {margin-left: 0%;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+}
+body a:hover{
+    color: blueviolet;
+
+
+}
+
+body {
+    background-color: white(42, 39, 39);
+    background-repeat: no-repeat;
+    text-align: center;
+    color: rgb(49, 7, 28);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+}
+ iframe {
+     flex-direction: column;
+     margin: 90px;
+     
+ }
+ 
+.pelis nav{ 
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 198%;   
+}
+
+.pelis a {
+    text-decoration: none;
+    padding: 15px 30px;
+    font-weight: bold;
+    color: hotpink;  
+    font-size: 15px;  
+    height: 20;      
+    text-transform: uppercase;
+    
+}
+
+
+ .pelis a:hover{
+    background-color: aliceblue;
+    filter: blur(-1px);
+    transform: scale(1.3); 
+    
+   
+      
+}
+
+.pelis {
+    background-color: rgb(28, 24, 24); 
+    margin: 15px 30px;
+    width: 65%;
+    display: flex;
+
+   
+
+
+}
+
+    
+
+
+
+.foto {
+    display: grid;
+    grid-auto-rows: minmax(200px auto);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 10px;
+    margin: auto;
+    gap: 20;
+    overflow: hidden;
+}
+.foto img{
+    width: 50%;
+    margin: 5px;
+    vertical-align: top;
+    height: 300px;
+    object-fit: cover;
+    padding: 5%;
+    
+}
+.foto a{
+    display: block;
+    overflow: hidden;
+    
+}
+.foto a:hover{
+    filter: blur(-1px);
+    transform: scale(1.3);
+}
+
+footer {
+    justify-content: flex-end;
+    color: blueviolet;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: black;
+    padding: 25px 30px;
+}
+ footer .container{
+    align-items: left;
+ }
